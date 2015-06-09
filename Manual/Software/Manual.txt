@@ -1,0 +1,11 @@
+De site https://learn.sparkfun.com/tutorials/galileo-getting-started-guide is een goede handleiding te vinden voor meer verduidelijking.
+De PDF in deze map is een zeer uitgebreide documentatie over alles van de Galileo.
+
+Om de Galileo te laten starten met de grotere Linux-Image is Image.rar nodig. Hierin zit een folder Image.
+De inhoud van deze folder moet in de root map van een micro-SD kaart gekopieerd worden.
+Nadat de SD-kaart in de Galileo zit kan deze gevoed worden (5V). Het opstarten duurt even. De LED van SD zou normaal moeten knipperen.
+Indien deze LED helemaal niet knippert, moet mogelijks de firmware eerst geüpdatet worden. Hiervoor de eerste stappen volgen op de getting started guide (zie site hierboven).
+Als de Galileo is opgestart kan de terminal bereikt worden op twee manieren.
+	Met de miniUSB/USBkabel: hiervoor moeten de drivers correct geïnstalleerd zijn. De Galileo verschijnt bij apparaatbeheer onder een COM-poort. Met Putty kan geconnecteerd worden via Serial, de correcte COM-poort en 115200 baud. Een zwarte terminal verschijnt, op enter drukken geeft een prompt. 'root' intypen logt in.
+	Met SSH: De Galileo start automatisch een adhoc netwerk met SSID RobotNetwerk en IP 192.168.1.2. Via Putty kan hiermee geconnecteerd worden (zelf ook een statisch IP adres instellen bv 192.168.1.12 en gateway 192.168.1.0). Connecteren duurt even, uiteindelijk wordt de login gevraagd: 'root'. Best na inloggen 'top' intypen en het python programma dat draait (robotsocketsplinenewRLS.py) stopzetten.
+Het opstartscript is te vinden onder /pythonprogrammas/startup.sh
